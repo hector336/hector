@@ -1,124 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
     <title>MI PRIMERA VEZ CON JAVASCRIPT</title>
 </head>
 <body>
 
 <nav class="navbar bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand text-white" href="index.html">
-      <img src="img/WIN_20260731_15_57_18_Pro.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      PRACTICA 1 JS
-    </a>
-  </div>
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="index.html">
+            <img src="img/SIGNOS/WIN_20260731_15_57_18_Pro.jpg"
+                 alt="Logo" width="30" height="24"
+                 class="d-inline-block align-text-top">
+            PRACTICA 1 JS
+        </a>
+    </div>
 </nav>
-    
-<div class="container p-4">
-  <h4 class="mb-4 text-center">10 Botones XD</h4>
-  
-  <div class="row g-4">
-      <div class="col-6 d-flex flex-column gap-3">
-          <button class="btn w-100" style="background-color: blue; color: white;" onclick="mensaje1()"><i class="bi bi-floppy mx-1"></i> Guardar</button>
-          <button class="btn w-100" style="border: 2px solid black; color: #2b105c; background-color: transparent;" onclick="mensaje2()"><i class="bi bi-trash mx-1"></i> Eliminar</button>
-          <button class="btn w-100 rounded-pill" style="background-color: #2ecc71; color: white;" onclick="mensaje3()"><i class="bi bi-check-circle mx-1"></i> Aceptar</button>
-          <button class="btn w-100 btn-lg" style="background-color: rebeccapurple; color: black;" onclick="mensaje4()"><i class="bi bi-exclamation-triangle mx-1"></i> Alerta</button>
-          <button class="btn w-100 btn-sm" style="background-color: #1abc9c; color: white;" onclick="mensaje5()"><i class="bi bi-info-square mx-1"></i> Info</button>
-      </div>
 
-      <div class="col-6 d-flex flex-column gap-3">
-          <button class="btn w-100 shadow" style="background-color: #f30f7d; color: white;" onclick="mensaje6()"><i class="bi bi-gear mx-1"></i> Ajustes</button>
-          <button class="btn w-100" style="background-color: #92bbe4; color: white;" onclick="mensaje7()"><i class="bi bi-moon-stars mx-1"></i> Nocturno</button>
-          <button class="btn w-100" style="border: 2px dashed #c0392b; color: #54d5f5; background-color: white;" onclick="mensaje8()"><i class="bi bi-envelope-paper mx-1"></i> Enviar</button>
-          <button class="btn w-100" style="background-color: #d35400; color: white;" onclick="mensaje9()"><i class="bi bi-person-circle mx-1"></i> Usuario</button>
-          <button class="btn w-100 shadow-lg" style="background-color: #34495e; color: white;" onclick="mensaje10()"><i class="bi bi-power mx-1"></i> Apagar</button>
-      </div>
-  </div>
+<div class="container p-4">
+    <h4 class="mb-4 text-center">10 Botones XD</h4>
+
+    <div class="row g-4">
+        <div class="col-6 d-flex flex-column gap-3">
+
+            <!-- BOTON 1 -->
+            <a class="btn w-100"
+               style="background-color: blue; color: white;"
+               onclick="mensaje1()">
+                <i class="bi bi-floppy mx-1"></i>
+                PRACTICA 1
+            </a>
+
+            <!-- BOTON 2 -->
+            <a class="btn w-100"
+               style="border: 2px solid black; color: #2b105c; background-color: transparent;"
+               onclick="mensaje2()">
+                <i class="bi bi-trash mx-1"></i>
+                PRACTICA 2
+            </a>
+
+            <!-- BOTON 3 -->
+            <a class="btn w-100"
+               style="background-color: #198754; color: white;"
+               onclick="mensaje3()">
+                <i class="bi bi-code-slash mx-1"></i>
+                PRACTICA 3
+            </a>
+
+        </div>
+    </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/sweetalert2.all.min.js"></script>
 
 <script>
-  function mensaje1(){
-    Swal.fire({ title: "¡Éxito!", text: "Se guardaron los datos.", icon: "success" });
-  }
+    function mensaje1() {
+        Swal.fire({
+            title: "¡Vamos a la práctica 1!",
+            text: "Estás a punto de abrir la primera práctica.",
+            icon: "success",
+            confirmButtonText: "Continuar",
+            confirmButtonColor: "#0d6efd",
+            showCancelButton: true,
+            cancelButtonText: "Cancelar"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "practica1.html";
+            }
+        });
+    }
 
-  function mensaje2(){
-    Swal.fire({ title: "Error fatal", text: "No se pudo eliminar.", icon: "error" });
-  }
+    function mensaje2() {
+        Swal.fire({
+            title: "Práctica 2",
+            text: "¿Quieres entrar a la segunda práctica?",
+            icon: "question",
+            confirmButtonText: "Sí, entrar",
+            confirmButtonColor: "#6f42c1",
+            showCancelButton: true,
+            cancelButtonText: "Regresar"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "practica2.html";
+            }
+        });
+    }
 
-  function mensaje3(){
-    Swal.fire({ title: "Precaución", text: "Verifica antes de continuar.", icon: "warning" });
-  }
-
-  function mensaje4(){
-    Swal.fire({ title: "Dato importante", text: "Mantenimiento programado.", icon: "info" });
-  }
-
-  function mensaje5(){
-    Swal.fire({ title: "¿Dudas?", text: "¿Leer la documentación?", icon: "question" });
-  }
-
-  function mensaje6(){
-    Swal.fire({
-      title: "¡Configuración!",
-      text: "Ajustes avanzados habilitados.",
-      imageUrl: "data:image/png;base64,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",
-      imageWidth: 400, imageHeight: 200, imageAlt: "Imagen"
-    });
-  }
-
-  function mensaje7(){
-    Swal.fire({
-      toast: true, position: 'top-end', icon: 'success',
-      title: 'Modo nocturno activado', showConfirmButton: false,
-      timer: 3000, timerProgressBar: true
-    });
-  }
-
-  function mensaje8(){
-    let timerInterval;
-    Swal.fire({
-      title: 'Enviando...',
-      html: 'Cerrando en <b></b> milisegundos.',
-      timer: 2000, timerProgressBar: true,
-      didOpen: () => {
-        Swal.showLoading();
-        const b = Swal.getHtmlContainer().querySelector('b');
-        timerInterval = setInterval(() => { b.textContent = Swal.getTimerLeft(); }, 100);
-      },
-      willClose: () => { clearInterval(timerInterval); }
-    });
-  }
-
-  function mensaje9(){
-    Swal.fire({
-      title: 'Tu nombre:', input: 'text',
-      showCancelButton: true, confirmButtonText: 'Guardar', cancelButtonText: 'Cancelar'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire(`¡Hola, ${result.value}!`, '', 'success');
-      }
-    });
-  }
-
-  function mensaje10(){
-    Swal.fire({
-      title: '¿Apagar sistema?', text: "Se perderán los cambios.",
-      icon: 'warning', showCancelButton: true,
-      confirmButtonColor: '#d33', cancelButtonColor: '#3085d6',
-      confirmButtonText: 'Sí, apagar', cancelButtonText: 'Cancelar'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire('¡Apagado!', 'El sistema se detuvo.', 'success');
-      }
-    });
-  }
+    function mensaje3() {
+        Swal.fire({
+            title: "¡Práctica 3!",
+            text: "Prepárate para explorar la tercera práctica.",
+            icon: "info",
+            confirmButtonText: "¡Vamos!",
+            confirmButtonColor: "#198754",
+            showCancelButton: true,
+            cancelButtonText: "Cancelar"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "practica3.html";
+            }
+        });
+    }
 </script>
+
 </body>
 </html>
+```
